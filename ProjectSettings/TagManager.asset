@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - BowHarp
+  - Cimbalom
+  - HurdyGurdy
+  - Koto
+  - Shamisen
+  - PeruvianWaterWhistle
   layers:
   - Default
   - TransparentFX

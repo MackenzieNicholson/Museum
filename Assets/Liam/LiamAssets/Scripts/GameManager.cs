@@ -5,46 +5,28 @@ using Unity.XR;
 
 public class GameManager : MonoBehaviour
 {
-//    public UnityEngine.XR.InputDevice rightHand;
-//    public UnityEngine.XR.InputDevice leftHand;
+    public int objectMatchCount;
+    private bool win = false;
+    private bool finished = false;
 
+    private void Update()
+    {
+        if (objectMatchCount == 6 && finished == false)
+        {
+            win = true;
+            finished = true;
+        }
 
-//    void Start()
-//    {
-//        var leftHandDevices = new List<UnityEngine.XR.InputDevice>();
-//        UnityEngine.XR.InputDevices.GetDevicesAtXRNode(UnityEngine.XR.XRNode.LeftHand, leftHandDevices);
+        if(win == true && finished == true)
+        {
+            RoomWin();
+            win = false;
+        }
+    }
 
-//        Debug.Log("Debug Works");
+    public void RoomWin()
+    {
+        Debug.Log("You Win");
+    }
 
-//        if (leftHandDevices.Count == 1)
-//        {
-//            UnityEngine.XR.InputDevice device = leftHandDevices[0];
-//            device = leftHand;
-//            Debug.Log(string.Format("Device name '{0}' with role '{1}'", device.name));
-//        }
-//        else if (leftHandDevices.Count > 1)
-//        {
-//            Debug.Log("Found more than one left hand!");
-//        }
-
-//        var rightHandDevices = new List<UnityEngine.XR.InputDevice>();
-//        UnityEngine.XR.InputDevices.GetDevicesAtXRNode(UnityEngine.XR.XRNode.RightHand, rightHandDevices);
-
-//        if (rightHandDevices.Count == 1)
-//        {
-//            UnityEngine.XR.InputDevice device = rightHandDevices[0];
-//            device = rightHand;
-//            Debug.Log(string.Format("Device name '{0}' with role '{1}'", device.name));
-//        }
-//        else if (rightHandDevices.Count > 1)
-//        {
-//            Debug.Log("Found more than one right hand!");
-//        }
-//    }
-
-
-//    void Update()
-//    {
-
-//    }
 }
