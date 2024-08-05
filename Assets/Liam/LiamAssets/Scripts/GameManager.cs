@@ -9,6 +9,9 @@ public class GameManager : MonoBehaviour
     private bool win = false;
     private bool finished = false;
 
+    public GameObject winCube;
+
+
     private void Update()
     {
         if (objectMatchCount == 6 && finished == false)
@@ -27,6 +30,7 @@ public class GameManager : MonoBehaviour
     public void RoomWin()
     {
         Debug.Log("You Win");
+        winCube.SetActive(true);
     }
 
 }
