@@ -7,20 +7,22 @@ public class GameManager : MonoBehaviour
 {
     public int objectMatchCount;
     private bool win = false;
-    private bool finished = false;
+    public static bool musicFinished = false;
 
     public GameObject winCube;
+    public GameObject blockade;
+    public GameObject musicDoor;
 
 
     private void Update()
     {
-        if (objectMatchCount == 6 && finished == false)
+        if (objectMatchCount == 6 && musicFinished == false)
         {
             win = true;
-            finished = true;
+            musicFinished = true;
         }
 
-        if(win == true && finished == true)
+        if(win == true && musicFinished == true)
         {
             RoomWin();
             win = false;
@@ -31,6 +33,8 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("You Win");
         winCube.SetActive(true);
+        blockade.SetActive(false);
+        musicDoor.SetActive(true);
     }
 
 }
