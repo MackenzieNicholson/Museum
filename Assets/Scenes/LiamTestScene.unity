@@ -1393,7 +1393,7 @@ MonoBehaviour:
 
     However,
     there seems have been a mix up while setting up the room and the instruments
-    aren''t on the correct pedestals.
+    are not on the correct pedestals.
 
 
     Please wait for museum staff to come
@@ -1444,7 +1444,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &518052180
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4669,6 +4669,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 3420787645440273728, guid: 445b1c964aa503c4784a94d0844d9bd4,
+        type: 3}
+      propertyPath: m_Text
+      value: Water Whistle
       objectReference: {fileID: 0}
     - target: {fileID: 3420787645440273728, guid: 445b1c964aa503c4784a94d0844d9bd4,
         type: 3}
