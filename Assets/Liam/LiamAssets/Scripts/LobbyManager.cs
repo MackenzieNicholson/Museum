@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LobbyManager : MonoBehaviour
 {
@@ -17,9 +18,9 @@ public class LobbyManager : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void MuseumReset()
     {
-        
+        GameManager.musicFinished = false;
+        SceneManager.LoadScene("Lobby");
     }
 }
