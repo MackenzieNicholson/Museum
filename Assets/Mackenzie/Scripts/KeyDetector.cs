@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 using TMPro;
 
@@ -37,7 +38,7 @@ public class KeyDetector : MonoBehaviour
                     var accessGranted = false;
                     if(display.text.Length > 0)
                     {
-                        //accessGranted = keyPadControll.CheckIfCorrect(Convert.ToInt32(display.text));
+                        accessGranted = keyPadControll.CheckIfCorrect(Convert.ToInt32(display.text));
                     }
 
                     if(accessGranted == true)
