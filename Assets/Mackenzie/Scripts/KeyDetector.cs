@@ -13,12 +13,14 @@ public class KeyDetector : MonoBehaviour
     void Start()
     {
         display = GameObject.FindGameObjectWithTag("Display").GetComponentInChildren<TextMeshPro>();
-        display.text = "";
+        display.text = "Enter Pin";
 
         keyPadControll = GameObject.FindGameObjectWithTag("KeyPad").GetComponent<KeyPadControll>();
     }
 
-    private void OnTriggerEnter(Collider other)
+
+
+    public void OnTriggerEnter(Collider other)
     {
         if(other.CompareTag("KeyPadButton"))
         {
