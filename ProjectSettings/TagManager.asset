@@ -12,6 +12,8 @@ TagManager:
   - PeruvianWaterWhistle
   - Display
   - KeyPad
+  - KeyPadButton
+  - KeypadButton
   layers:
   - Default
   - TransparentFX
