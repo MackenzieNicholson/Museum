@@ -4,8 +4,12 @@ using System;
 using UnityEngine;
 using TMPro;
 
+
 public class KeyDetector : MonoBehaviour
 {
+
+    public GameObject DOOOOR;
+
     private TextMeshPro display;
 
     private KeyPadControll keyPadControll;
@@ -45,7 +49,8 @@ public class KeyDetector : MonoBehaviour
 
                     if(accessGranted == true)
                     {
-                        display.text = "Start";
+                        display.text = "Proceed";
+                        DOOOOR.SetActive(true);
                     }
                     else
                     {
